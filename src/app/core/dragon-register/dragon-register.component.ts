@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
-import { Router } from '@angular/router'
-import {DragonsService} from "@shared/services/dragons-service";
+import { Router, ActivatedRoute } from '@angular/router'
+import { DragonsService } from "@shared/services/dragons-service";
+import { IDragon } from "@shared/interfaces/dragon-service.interface";
 
 @Component({
   selector: 'app-dragon-register',
@@ -11,6 +12,8 @@ import {DragonsService} from "@shared/services/dragons-service";
 export class DragonRegisterComponent implements OnInit {
 
   loading = false;
+  paramId: number | undefined;
+  isEditing = false;
 
   formData: FormGroup = this.fb.group(
     {
@@ -25,11 +28,28 @@ export class DragonRegisterComponent implements OnInit {
     private fb: FormBuilder,
     private dragonsService: DragonsService,
     private router: Router,
-  ) { }
+    private route: ActivatedRoute,
+  ) {
+    this.route.params.subscribe((params) => {
+      if (params['id']) {
+        this.paramId = Number(params['id']);
+        this.isEditing = true;
+      }
+      console.log('isEditing', this.isEditing);
+
+    })
+  }
 
 
 
   ngOnInit(): void {
+
+    if(this.isEditing) {
+      this.formData.disable();
+      this.dragonsService.getDragonDetail(this.paramId).subscribe((dragonData: IDragon) => {
+
+      });
+    }
 
   }
 
@@ -50,15 +70,31 @@ export class DragonRegisterComponent implements OnInit {
   }
 
   onSubmit() {
+    this.formData.disable();
 
     if (!this.formData.valid || !this.formData.touched) {
       return;
     }
 
     this.loading = true;
+    if (this.isEditing) {
+      const dragonData: IDragon = {
+        ...this.formData.value,
+        id: this.paramId
+      }
+      this.dragonsService.updateDragon(dragonData).subscribe( () => {
+        this.formData.reset();
+        this.formData.enable();
+        this.loading = false;
+        this.router.navigate(['/dragons/all']).then();
+      });
+    }
+
+
     this.dragonsService.createDragon(this.formData.value).subscribe( () => {
 
       this.formData.reset();
+      this.formData.enable();
       this.loading = false;
       this.router.navigate(['/dragons/all']).then();
     });

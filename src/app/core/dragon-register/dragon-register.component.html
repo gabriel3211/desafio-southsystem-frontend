@@ -25,7 +25,7 @@
              class="alert">
 
           <div *ngIf="type!.errors?.['required']">
-            *O nome é requerido!
+            *O tipo é requerido!
           </div>
           <div *ngIf="type!.errors?.['minlength']">
             *É necessário no mínimo 4 caracteres
@@ -40,7 +40,7 @@
              class="alert">
 
           <div *ngIf="history!.errors?.['required']">
-            *O nome é requerido!
+            *O Resumo é requerido!
           </div>
           <div *ngIf="history!.errors?.['minlength']">
             *É necessário no mínimo 4 caracteres
@@ -54,9 +54,8 @@
                formControlName="avatarUrl" required>
         <div *ngIf="avatarUrl!.invalid && (avatarUrl!.dirty || avatarUrl!.touched)"
              class="alert">
-
           <div *ngIf="avatarUrl!.errors?.['required']">
-            *O nome é requerido!
+            *O avatar é requerido!
           </div>
           <div *ngIf="avatarUrl!.errors?.['minlength']">
             *É necessário no mínimo 4 caracteres
@@ -66,7 +65,6 @@
       <div class="flex-row__submit-button">
         <button type="submit" class="form-control__submit-button" [disabled]="!formData.valid">Salvar</button>
       </div>
-
 
     </form>
 

@@ -7,6 +7,6 @@ export interface IDragon {
       description: string;
     }
   ];
-  id: number;
+  id: number | undefined;
   avatar?: string;
 }

@@ -7,13 +7,16 @@ import { DragonRegisterComponent } from '@core/dragon-register/dragon-register.c
 
 
 const routes: Routes = [
+  { path: '',   redirectTo: '/dragons/all', pathMatch: 'full' },
   {
     path: 'dragons', component: CoreComponent,
     children: [
       { path: 'all', component: DragonsComponent  },
-      { path: 'new', component: DragonRegisterComponent }
+      { path: 'new', component: DragonRegisterComponent },
+      { path: 'update/:id', component: DragonRegisterComponent },
     ]
   }
+  // { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

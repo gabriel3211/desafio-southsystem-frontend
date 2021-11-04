@@ -66,8 +66,10 @@ export class DragonsComponent implements OnInit {
 
   }
 
-  openDragonDetails(id: number) {
-    EventEmitterService.get('detailedDragonEvent').emit( this.dragonObj[id] );
+  openDragonDetails(id: IDragon['id']) {
+    if (typeof id === 'number') {
+      EventEmitterService.get('detailedDragonEvent').emit( this.dragonObj[id] );
+    }
 
   }
 
