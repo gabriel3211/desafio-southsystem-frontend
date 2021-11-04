@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open-Sans'), local('Open_Sans'), local('OpenSans'), local('Open Sans'), url('~assets/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open-Sans'), local('Open_Sans'), local('OpenSans'), local('Open Sans'), url('~assets/fonts/OpenSans/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open-Sans'), local('Open_Sans'), local('OpenSans'), local('Open Sans'), url('~assets/fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kiro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Kiro Light'), local('Kiro-Light'), url('../../fonts/kiro/Kiro-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Kiro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kiro Light'), local('Kiro-Light'), url('../../fonts/kiro/Kiro-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Kiro';
+  font-weight: 700;
+  src: local('Kiro Bold'), local('Kiro-Bold'), url('../../fonts/kiro/Kiro-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'KiroThin';
+  font-weight: normal;
+  src: local('Kiro Thin'), local('Kiro-Thin'), url('../../fonts/kiro/Kiro-Thin.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'KiroRegular';
+  font-weight: normal;
+  src: local('Kiro Regular'), local('Kiro-Regular'), url('../../fonts/kiro/Kiro-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'KiroExtraLight';
+  font-weight: normal;
+  src: local('Kiro Regular'), local('Kiro-Regular'), url('../../fonts/kiro/Kiro-Extra-Light.woff') format('opentype');
+}

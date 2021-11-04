@@ -1,0 +1,28 @@
+$palette: (
+  'blue': #2196f3,
+  'indigo': #6610f2,
+  'purple': #7760bd,
+  'pink': #e83e8c,
+  'red': #e95753,
+  'orange': #fd7e14,
+  'yellow': #efb750,
+  'green': #49ce62,
+  'teal': #20c997,
+  'cyan': #17a2b8,
+  'white': #fff,
+  'gray': #f3f3f3,
+  'gray-100': #f9f9f9,
+  'gray-dark': #343a40,
+  'primary': #2196f3,
+  'secondary': #6c757d,
+  'success': #49ce62,
+  'info': #17a2b8,
+  'warning': #efb750,
+  'danger': #e95753,
+  'light': #f8f9fa,
+  'dark': #343a40,
+);
+
+@function color-palette($color) {
+  @return map-get($palette, $color);
+};

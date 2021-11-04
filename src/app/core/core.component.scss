@@ -1,0 +1,29 @@
+@import '~assets/scss/theme/default';
+@import '~assets/scss/base/_typography.scss';
+
+
+section {
+  width: 100%;
+  min-height: 400px;
+  background-color: color-palette('white');
+  box-shadow: 0 0 10px -9px currentColor;
+  font-family: $font-family-base;
+  font-size: $font-family-size-base;
+  border-radius: 15px;
+  transition: ease 1s;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  margin: 0 4px;
+}
+
+
+main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  font-weight: $font-weight-base;
+  font-family: $font-family-base;
+  font-size: $font-family-size-base;
+}

@@ -1,0 +1,40 @@
+@import '~assets/scss/theme/default';
+@import '~assets/scss/base/_typography.scss';
+
+
+.dragons__content__order {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+
+  svg {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: ease .5s;
+
+    &.z-a {
+      transform: rotateY(180deg);
+
+    }
+
+  }
+
+}
+
+.dragons__content {
+  display: grid;
+  grid-template-columns:
+  repeat(auto-fit, minmax(10rem, 12rem));
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+
+
+

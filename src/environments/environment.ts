@@ -6,6 +6,11 @@ export const environment = {
   production: false
 };
 
+export const API = {
+  base: 'http://5c4b2a47aa8ee500142b4887.mockapi.io'
+}
+
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
